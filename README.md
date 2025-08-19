@@ -1,7 +1,7 @@
 # 🔗 LinkShrink
 
 <div align="center">
-  <img src="images/screenshot1.png" alt="LinkShrink Interface" width="600"/>
+  <img src="images/Screenshot1.png" alt="LinkShrink Interface" width="600"/>
 </div>
 
 A simple URL shortener that converts long URLs into short links and generates QR codes.
@@ -39,7 +39,7 @@ A simple URL shortener that converts long URLs into short links and generates QR
 ## 📸 Screenshots
 
 ### Main Interface
-![LinkShrink App](images/screenshot2.png)
+![LinkShrink App](images/Screenshot2.png)
 
 ### QR Code Generation
 <div align="center">
