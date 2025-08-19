@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     },
   },
 
-  // alternates: {
-  //   canonical: "https://yourdomain.com",
-  // },
+  alternates: {
+    canonical: "https://link-shrink-eta.vercel.app/
+  },
 };
 
 export default function RootLayout({
