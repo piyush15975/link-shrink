@@ -2,6 +2,8 @@
 
 <div align="center">
   <img src="images/Screenshot1.png" alt="LinkShrink Interface" width="600"/>
+  
+  **🚀 [Live Demo](https://link-shrink-eta.vercel.app/) 🚀**
 </div>
 
 A simple URL shortener that converts long URLs into short links and generates QR codes.
@@ -17,7 +19,7 @@ A simple URL shortener that converts long URLs into short links and generates QR
 
 1. **Clone & Install**
    ```bash
-   git clone https://github.com/yourusername/link-shrink.git
+   git clone https://github.com/piyush15975/link-shrink.git
    cd link-shrink
    npm install
    ```
@@ -55,6 +57,17 @@ A simple URL shortener that converts long URLs into short links and generates QR
 - **Tailwind CSS** - Styling
 - **QRCode.react** - QR code generation
 - **TypeScript** - Type safety
+
+## 📁 Project Structure
+
+```
+link-shrink/
+├── app/
+│   ├── api/shorten/     # URL shortening API
+│   └── page.tsx         # Main page
+├── models/              # MongoDB schemas
+└── .env.local           # Environment variables
+```
 
 ## 🌟 How It Works
 
