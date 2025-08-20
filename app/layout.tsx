@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://link-shrink-eta.vercel.app/
+    canonical: "https://link-shrink-eta.vercel.app/",
   },
 };
 
