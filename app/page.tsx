@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 
 export default function Home() {
@@ -10,7 +10,6 @@ export default function Home() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
-  const qrRef = useRef<HTMLCanvasElement>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -32,7 +31,8 @@ export default function Home() {
         setLoading(false);
         return;
       }
-      setShortUrl(`${data.shortUrl}`);
+      // Make sure the short URL includes https://
+      setShortUrl(data.shortUrl.startsWith("http") ? data.shortUrl : `https://${data.shortUrl}`);
     } catch (err) {
       console.error(err);
       setError("Something went wrong");
@@ -50,8 +50,10 @@ export default function Home() {
   };
 
   const handleDownloadQR = () => {
-    if (!qrRef.current) return;
-    const url = qrRef.current.toDataURL("image/png");
+    if (!shortUrl) return;
+    const canvas = document.getElementById("qrCode") as HTMLCanvasElement;
+    if (!canvas) return;
+    const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
     a.href = url;
     a.download = "qr-code.png";
@@ -119,13 +121,18 @@ export default function Home() {
               </button>
             </div>
 
-            <QRCodeCanvas ref={qrRef} value={shortUrl} size={160} className="mt-2 rounded-lg shadow-md" />
+            <QRCodeCanvas
+              id="qrCode"
+              value={shortUrl}
+              size={160}
+              className="mt-2 rounded-lg shadow-md"
+            />
           </div>
         )}
       </div>
 
       <footer className="mt-8 text-gray-500 text-sm text-center">
-        &copy; {new Date().getFullYear()} Built with ❤️ 
+        &copy; {new Date().getFullYear()} Built with ❤️
       </footer>
     </main>
   );
