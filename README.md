@@ -58,17 +58,6 @@ A simple URL shortener that converts long URLs into short links and generates QR
 - **QRCode.react** - QR code generation
 - **TypeScript** - Type safety
 
-## 📁 Project Structure
-
-```
-link-shrink/
-├── app/
-│   ├── api/shorten/     # URL shortening API
-│   └── page.tsx         # Main page
-├── models/              # MongoDB schemas
-└── .env.local           # Environment variables
-```
-
 ## 🌟 How It Works
 
 1. Enter a long URL
