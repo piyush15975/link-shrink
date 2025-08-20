@@ -27,7 +27,7 @@ A simple URL shortener that converts long URLs into short links and generates QR
 2. **Environment Setup**
    ```bash
    # Create .env.local
-   MONGODB_URI=your-mongodb-connection-string
+   MONGO_URI=your-mongodb-connection-string
    NEXT_PUBLIC_BASE_URL=http://localhost:3000
    ```
 
