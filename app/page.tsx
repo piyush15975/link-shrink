@@ -132,7 +132,7 @@ export default function Home() {
       </div>
 
       <footer className="mt-8 text-gray-500 text-sm text-center">
-        &copy; {new Date().getFullYear()} Crafted with ❤️
+        Crafted with ❤️
       </footer>
     </main>
   );
